@@ -11,12 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
     <style>
-        /* === CÃ¡ÂºÂ¤U HÃÂNH GIAO DIÃ¡Â»ÂN === */
+        /* === CẤU HÌNH GIAO DIỆN === */
         :root {
             --aib-bg-main: #f2f4f8; 
             --aib-border: #e1e4e8;
             
-            /* MÃÂ u nhÃ¡ÂºÂ­n diÃ¡Â»Ân */
+            /* Màu nhận diện */
             --color-legal: #0077c2;
             --color-inv: #2e7d32;
             --color-sales: #7b1fa2;
@@ -30,7 +30,7 @@
         
         body {
             margin: 0; padding: 0;
-            /* Font chÃ¡Â»Â¯ ÃÂ°u tiÃÂªn Roboto, sau ÃÂÃÂ³ lÃÂ  cÃÂ¡c font hÃ¡Â»Â thÃ¡Â»Âng */
+            /* Font chữ ưu tiên Roboto, sau đó là các font hệ thống */
             font-family: 'Roboto', 'Segoe UI', Helvetica, Arial, sans-serif;
             background-color: #f0f2f5;
             color: var(--text-primary);
@@ -39,7 +39,7 @@
 
         body.aib-modal-open { overflow: hidden; position: fixed; width: 100%; }
 
-        /* === 1. NÃÂT KÃÂCH HOÃ¡ÂºÂ T (GIÃ¡Â»Â®A MÃÂN HÃÂNH) === */
+        /* === 1. NÚT KÍCH HOẠT (GIỮA MÀN HÌNH) === */
         #aib-trigger {
             position: fixed; 
             bottom: 30px; 
@@ -53,7 +53,7 @@
             display: flex; align-items: center; justify-content: center;
             font-size: 30px;
         }
-        #aib-trigger::after { content: "Ã°ÂÂÂ"; display: block; margin-top: -3px; }
+        #aib-trigger::after { content: "🚀"; display: block; margin-top: -3px; }
         #aib-trigger:active { transform: translateX(-50%) scale(0.9); }
         
         @keyframes pulse-blue {
@@ -98,7 +98,7 @@
             display: flex; align-items: center; justify-content: center;
         }
 
-        /* === 4. NÃ¡Â»ÂI DUNG CHÃÂNH === */
+        /* === 4. NỘI DUNG CHÍNH === */
         .aib-dashboard-content {
             flex: 1; overflow-y: auto;
             padding: 10px 0;
@@ -106,7 +106,7 @@
             display: flex; flex-direction: column; gap: 20px;
         }
 
-        /* === 5. KHUNG & DANH SÃÂCH LÃÂ¯Ã¡Â»ÂT NGANG === */
+        /* === 5. KHUNG & DANH SÁCH LƯỚT NGANG === */
         .aib-panel {
             background: transparent;
             display: flex; flex-direction: column;
@@ -130,7 +130,7 @@
             padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold;
         }
 
-        /* CÃ¡ÂºÂ¤U HÃÂNH VUÃ¡Â»ÂT NGANG */
+        /* CẤU HÌNH VUỐT NGANG */
         .aib-card-list {
             display: flex;
             gap: 12px;
@@ -142,7 +142,7 @@
         }
         .aib-card-list::-webkit-scrollbar { display: none; }
 
-        /* THÃ¡ÂºÂº CARD */
+        /* THẺ CARD */
         .aib-tool-card {
             flex: 0 0 85%;
             max-width: 320px;
@@ -173,7 +173,7 @@
         
         .aib-tool-title {
             color: var(--text-primary);
-            font-size: 15px; font-weight: 700; /* TÃÂng ÃÂÃ¡Â»Â ÃÂÃ¡ÂºÂ­m ÃÂÃ¡Â»Â dÃ¡Â»Â ÃÂÃ¡Â»Âc hÃÂ¡n */
+            font-size: 15px; font-weight: 700; /* Tăng độ đậm để dễ đọc hơn */
             margin-bottom: 4px; display: block;
             white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
@@ -203,14 +203,14 @@
         .ic-9 { background-image: url('https://cdn.imgpile.com/f/gyRxseP_xl.jpg'); }
         .ic-10 { background-image: url('https://cdn.imgpile.com/f/mAU1ZD6_xl.jpg'); }
         .ic-14 { background-image: url('https://cdn.imgpile.com/f/4sPHL4H_xl.jpg'); }
-        .ic-11, .ic-12, .ic-13, .ic-15, .ic-16, .ic-17, .ic-18, .ic-19, .ic-20 , .ic-21, .ic-22, .ic-23, .ic-24,.ic-25,.ic-26,.ic-27,.ic-28 {
+        .ic-11, .ic-12, .ic-13, .ic-15, {
             background-image: url('https://cdn.imgpile.com/f/mAU1ZD6_xl.jpg');
         }
 
-        /* === PC/DESKTOP (HiÃ¡Â»Ân dÃ¡ÂºÂ¡ng lÃÂ°Ã¡Â»Âi) === */
+        /* === PC/DESKTOP (Hiện dạng lưới) === */
         @media (min-width: 1024px) {
             #aib-trigger { left: auto; right: 30px; bottom: 30px; transform: none; width: auto; height: auto; padding: 12px 28px; border-radius: 50px; }
-            #aib-trigger::after { content: "MÃ¡Â»Â AI BOARD"; margin-left: 8px; font-size: 16px; margin-top: 0; }
+            #aib-trigger::after { content: "MỞ AI BOARD"; margin-left: 8px; font-size: 16px; margin-top: 0; }
             
             #aib-modal { align-items: center; justify-content: center; background: rgba(0,0,0,0.5); }
             .aib-modal-header { border-radius: 12px 12px 0 0; width: 90%; max-width: 1200px; }
@@ -250,137 +250,92 @@
             <button id="aib-close-btn">&times;</button>
         </div>
         
-        <div class="aib-dashboard-content">
-
-            <div class="aib-panel area-legal">
-                <div class="aib-panel-header"><span>Ã¢ÂÂÃ¯Â¸Â PHÃÂP CHÃ¡ÂºÂ¾ (VuÃ¡Â»Ât ngang)</span></div>
-                <div class="aib-card-list">
-                    <a href="https://aistudio.google.com/apps/drive/1jOh3bvGXViUSx8lLEw9lDuGCuogH7om1?showPreview=true&showAssistant=true&fullscreenApplet=true" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-1"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">1. BÃ¡Â»Â PHÃ¡ÂºÂ¬N PHÃÂP CHÃ¡ÂºÂ¾ - IDECO</span><span class="aib-tool-sub">Email: baocaoideco@gmail.com</span></div>
-                    </a>
-                    <a href="https://aistudio.google.com/apps/drive/1jOh3bvGXViUSx8lLEw9lDuGCuogH7om1?showPreview=true&showAssistant=true" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-2"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">2. BÃ¡Â»Â PHÃ¡ÂºÂ¬N PHÃÂP CHÃ¡ÂºÂ¾ (Backup)</span><span class="aib-tag-backup">Backup System</span></div>
-                    </a>
-                    <a href="https://aistudio.google.com/apps/drive/1lWSwEsA8j4C9wdqkhKK5wbr0W4RsfVMm?showPreview=true&showAssistant=true&fullscreenApplet=true" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-3"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">3. TRA CÃ¡Â»Â¨U THÃÂNG TIN THUÃ¡Â»ÂC</span><span class="aib-tool-sub">GiÃÂ¡ kÃÂª khai, dÃÂ°Ã¡Â»Â£c thÃÂ°</span></div>
-                    </a>
-                </div>
-            </div>
+       
 
             <div class="aib-panel area-inventory">
-                <div class="aib-panel-header"><span>Ã°ÂÂÂ¦ KHO VÃ¡ÂºÂ¬N (VuÃ¡Â»Ât ngang)</span></div>
+                <div class="aib-panel-header"><span>📦 KHO VẬN (Vuốt ngang)</span></div>
                 <div class="aib-card-list">
                     <a href="https://phantichphieu.netlify.app/" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-4"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">4. XÃ¡Â»Â­ LÃÂ½ PhiÃ¡ÂºÂ¿u thuÃ¡Â»Âc FEFO</span><span class="aib-tool-sub">NhÃ¡ÂºÂ­p liÃ¡Â»Âu biÃÂªn bÃ¡ÂºÂ£n</span></div>
+                        <div class="aib-mini-icon ic-1"></div>
+                        <div class="aib-text-content"><span class="aib-tool-title"> Xử Lý Phiếu thuốc FEFO</span><span class="aib-tool-sub">Nhập liệu biên bản</span></div>
                     </a>
-                    <a href="https://aistudio.google.com/apps/drive/1fHglOZ1s6mOb0TivIkHPiV8jQVlcurf-?showPreview=true&showAssistant=true&fullscreenApplet=true" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-5"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">5. XÃ¡Â»Â­ LÃÂ½ PhiÃ¡ÂºÂ¿u (Backup)</span><span class="aib-tag-backup">Backup System</span></div>
-                    </a>
+                    
                     <a href="https://lancuoi.netlify.app" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-6"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">6. TÃ¡Â»Âng hÃ¡Â»Â£p ÃÂÃÂ¡n & VAT</span><span class="aib-tool-sub">TÃ¡Â»Âng hÃ¡Â»Â£p ÃÂÃÂ¡n hÃÂ ng</span></div>
+                        <div class="aib-mini-icon ic-2"></div>
+                        <div class="aib-text-content"><span class="aib-tool-title">  Tổng hợp đơn & VAT</span><span class="aib-tool-sub">Tổng hợp đơn hàng</span></div>
                     </a>
-                    <a href="https://aistudio.google.com/apps/drive/16fG5pi7OBeO2wYWnr4syfWs0Vv_nh4CH?showAssistant=true&showPreview=true" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-7"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">7. TÃ¡Â»Âng hÃ¡Â»Â£p ÃÂÃÂ¡n (Backup)</span><span class="aib-tag-backup">Backup System</span></div>
-                    </a>
+                    
                     <a href="https://phantichbanggia.netlify.app/" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-8"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">8. PhÃÂ¢n tÃÂ­ch P&L</span><span class="aib-tool-sub">PhÃÂ¢n tÃÂ­ch chiÃ¡ÂºÂ¿t khÃ¡ÂºÂ¥u</span></div>
+                        <div class="aib-mini-icon ic-3"></div>
+                        <div class="aib-text-content"><span class="aib-tool-title"> Phân tích P&L</span><span class="aib-tool-sub">Phân tích chiết khấu</span></div>
                     </a>
-                    <a href="https://aistudio.google.com/apps/drive/1ZqN-igAwFyl5ZK3dMNMTQ8dbHFb-aecX?showAssistant=true&showPreview=true&fullscreenApplet=true" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-9"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">9. PhÃÂ¢n tÃÂ­ch P&L (Backup)</span><span class="aib-tag-backup">Backup System</span></div>
-                    </a>
+                    
                 </div>
             </div>
 
             <div class="aib-panel area-sales">
-                <div class="aib-panel-header"><span>Ã°ÂÂÂ¨ KINH DOANH (VuÃ¡Â»Ât ngang)</span></div>
+                <div class="aib-panel-header"><span>🎨 KINH DOANH (Vuốt ngang)</span></div>
                 <div class="aib-card-list">
                     <a href="https://idecokhachhang.netlify.app/" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-10"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">10. Khai bÃÂ¡o KhÃÂ¡ch MÃ¡Â»Âi</span><span class="aib-tool-sub">App Mobile Sales</span></div>
+                        <div class="aib-mini-icon ic-4"></div>
+                        <div class="aib-text-content"><span class="aib-tool-title"> Khai báo Khách Mới</span><span class="aib-tool-sub">App Mobile Sales</span></div>
                     </a>
-                    <a href="https://donhang-dubao.netlify.app/" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-11"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">11. TÃ¡Â»Âng hÃ¡Â»Â£p ÃÂÃÂ¡n/ngÃÂ y</span><span class="aib-tool-sub">DÃ¡Â»Â± bÃÂ¡o ÃÂÃ¡ÂºÂ·t hÃÂ ng</span></div>
+                    <a href="https://dubaodonhang.netlify.app/" target="_blank" class="aib-tool-card">
+                        <div class="aib-mini-icon ic-5"></div>
+                        <div class="aib-text-content"><span class="aib-tool-title">. Tổng hợp đơn/ngày</span><span class="aib-tool-sub">Dự báo đặt hàng</span></div>
                     </a>
-                    <a href="https://aistudio.google.com/apps/drive/1GLirexPXzFXhfDblEs-cXNS8VF-Jv84a?showPreview=true&showAssistant=true&fullscreenApplet=true" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-12"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">12. TÃ¡Â»Âng hÃ¡Â»Â£p ÃÂÃÂ¡n (Backup)</span><span class="aib-tag-backup">Backup System</span></div>
-                    </a>
+                    
                     <a href="https://kiemtrahoadon12026.netlify.app" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-13"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">13. KiÃ¡Â»Âm tra HÃÂ - SÃ¡Â»Â LÃÂ´</span><span class="aib-tool-sub">LÃÂ°u trÃ¡Â»Â¯ 5 ngÃÂ y</span></div>
+                        <div class="aib-mini-icon ic-6"></div>
+                        <div class="aib-text-content"><span class="aib-tool-title"> Kiểm tra HĐ - Số Lô</span><span class="aib-tool-sub">Lưu trữ 5 ngày</span></div>
                     </a>
-                    <a href="https://aistudio.google.com/apps/drive/1oVYCjv3X_bCSbYyCdZoLkvadOogML203?showPreview=true&showAssistant=true&fullscreenApplet=true" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-14"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">14. KiÃ¡Â»Âm tra HÃÂ (Backup)</span><span class="aib-tag-backup">Backup 48h</span></div>
-                    </a>
+                   
                     <a href="https://kiemtracnt-dathang.netlify.app/" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-15"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">15. Check GiÃÂ¡ CNT & DÃ¡Â»Â± BÃÂ¡o</span><span class="aib-tool-sub">So sÃÂ¡nh giÃÂ¡ chuÃ¡Â»Âi</span></div>
+                        <div class="aib-mini-icon ic-7"></div>
+                        <div class="aib-text-content"><span class="aib-tool-title"> Check Giá CNT & Dự Báo</span><span class="aib-tool-sub">So sánh giá chuỗi</span></div>
                     </a>
-                    <a href="https://aistudio.google.com/apps/drive/1shNnk8jYFKkzL-inpvpIKjkP6gc_PvN0?showPreview=true&showAssistant=true&fullscreenApplet=true" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-16"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">16. Check giÃÂ¡ CNT (Backup)</span><span class="aib-tag-backup">Backup System</span></div>
-                    </a>
+                    
                     <a href="https://timnpp.netlify.app/" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-17"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">17. TÃÂ¬m khÃÂ¡ch & Tra SÃÂT</span><span class="aib-tool-sub">CÃÂ´ng cÃ¡Â»Â¥ Sales 01</span></div>
+                        <div class="aib-mini-icon ic-8"></div>
+                        <div class="aib-text-content"><span class="aib-tool-title">Tìm khách & Tra SĐT</span><span class="aib-tool-sub">Công cụ Sales 01</span></div>
                     </a>
                     <a href="https://lockhachhang.netlify.app/" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-18"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">18. LÃ¡Â»Âc khÃÂ¡ch tÃ¡Â»Â« Web</span><span class="aib-tool-sub">CÃÂ´ng cÃ¡Â»Â¥ Sales 02</span></div>
+                        <div class="aib-mini-icon ic-9"></div>
+                        <div class="aib-text-content"><span class="aib-tool-title">Lọc khách từ Web</span><span class="aib-tool-sub">Công cụ Sales 02</span></div>
                     </a>
                     <a href="https://taoprompt2026.netlify.app/" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-19"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">19. TÃ¡ÂºÂ¡o Prompt Poster</span><span class="aib-tool-sub">Content tÃ¡Â»Â± ÃÂÃ¡Â»Âng</span></div>
+                        <div class="aib-mini-icon ic-10"></div>
+                        <div class="aib-text-content"><span class="aib-tool-title">Tạo Prompt Poster</span><span class="aib-tool-sub">Content tự động</span></div>
                     </a>
-                    <a href="https://aistudio.google.com/apps/drive/1jp1htMUYctILOb5BJ-jwEBMHl37Oje5P?showAssistant=true&resourceKey=&showPreview=true&fullscreenApplet=true" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-20"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">20. TÃ¡ÂºÂ¡o Prompt (Backup)</span><span class="aib-tag-backup">Backup System</span></div>
-                    </a>
+                    
                     <a href="https://idecoweb.netlify.app/" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-21"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">21. TÃ¡ÂºÂ¡o Ã¡ÂºÂ¢nh & Video AI</span><span class="aib-tool-sub">ThiÃ¡ÂºÂ¿t kÃ¡ÂºÂ¿ & GiÃ¡ÂºÂ£i trÃÂ­</span></div>
+                        <div class="aib-mini-icon ic-11"></div>
+                        <div class="aib-text-content"><span class="aib-tool-title"> Tạo Ảnh & Video AI</span><span class="aib-tool-sub">Thiết kế & Giải trí</span></div>
                     </a>
-                    <a href="https://aistudio.google.com/apps/drive/1iBckdjf_VCut2LVzFzBfegtF06yJcbFK?showPreview=true&showAssistant=true" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-22"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">22. TÃ¡ÂºÂ¡o Ã¡ÂºÂ¢nh AI (Backup)</span><span class="aib-tag-backup">Backup System</span></div>
-                    </a>
+                   
                     <a href="https://capturevideo.netlify.app/" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-23"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">23. Capture Video</span><span class="aib-tag-backup">Backup System</span></div>
+                        <div class="aib-mini-icon ic-12"></div>
+                        <div class="aib-text-content"><span class="aib-tool-title"> Capture Video</span><span class="aib-tag-backup">Backup System</span></div>
                     </a>
-                    <a href="https://aistudio.google.com/apps/drive/1QXfhKIB_brcinarm0BcSry0JqT07l0Bp?showPreview=true&showAssistant=true" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-24"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">24. DÃ¡Â»Â±ng Ã¡ÂºÂ£nh hÃ¡Â»Âp thuÃ¡Â»Âc</span><span class="aib-tool-sub">ThiÃ¡ÂºÂ¿t kÃ¡ÂºÂ¿ bao bÃÂ¬</span></div>
+                    <a href="https://thauam.netlify.app" target="_blank" class="aib-tool-card">
+                        <div class="aib-mini-icon ic-13"></div>
+                        <div class="aib-text-content"><span class="aib-tool-title">Chuyển văn bản</span><span class="aib-tool-sub">voice</span></div>
                     </a>
                 </div>
             </div>
 
             <div class="aib-panel area-special">
-                <div class="aib-panel-header"><span>Ã°ÂÂ¤Â ÃÂÃÂO TÃ¡ÂºÂ O (VuÃ¡Â»Ât ngang)</span></div>
+                <div class="aib-panel-header"><span>🤖 ĐÀO TẠO (Vuốt ngang)</span></div>
                 <div class="aib-card-list">
                     <a href="https://trochuyen.netlify.app/" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-25"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">25. TÃÂ° VÃ¡ÂºÂ¥n KÃ¡ÂºÂ¿ toÃÂ¡n Kho</span><span class="aib-tool-sub">Voice AI</span></div>
+                        <div class="aib-mini-icon ic-14"></div>
+                        <div class="aib-text-content"><span class="aib-tool-title">Tư Vấn Kế toán Kho</span><span class="aib-tool-sub">Voice AI</span></div>
                     </a>
                     <a href="https://ketoanideco.netlify.app" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-26"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">26. NghiÃ¡Â»Âp vÃ¡Â»Â¥ kÃ¡ÂºÂ¿ toÃÂ¡n</span><span class="aib-tool-sub">HÃ¡Â»Âi ÃÂÃÂ¡p chuyÃÂªn mÃÂ´n</span></div>
+                        <div class="aib-mini-icon ic-15"></div>
+                        <div class="aib-text-content"><span class="aib-tool-title"> Nghiệp vụ kế toán</span><span class="aib-tool-sub">Hỏi đáp chuyên môn</span></div>
                     </a>
-                    <a href="https://aistudio.google.com/apps/drive/1VpHVEXajEKdJG-NcWJeKsj5qicPoeOkJ?showPreview=true&showAssistant=true" target="_blank" class="aib-tool-card">
-                        <div class="aib-mini-icon ic-27"></div>
-                        <div class="aib-text-content"><span class="aib-tool-title">27. TÃ¡ÂºÂ¡o BÃÂ¡o GiÃÂ¡ RiÃÂªng</span><span class="aib-tool-sub">TÃ¡Â»Â± ÃÂÃ¡Â»Âng hÃÂ³a</span></div>
-                    </a>
+                   
                 </div>
             </div>
 
@@ -411,7 +366,7 @@
             overlay.addEventListener('click', () => toggleModal(false));
             document.addEventListener('keydown', (e) => { if (e.key === 'Escape') toggleModal(false); });
 
-            // TÃ¡Â»Â± ÃÂÃ¡Â»Âng ÃÂÃ¡ÂºÂ¿m sÃ¡Â»Â lÃÂ°Ã¡Â»Â£ng cÃÂ´ng cÃ¡Â»Â¥
+            // Tự động đếm số lượng công cụ
             document.querySelectorAll('.aib-panel').forEach(panel => {
                 const count = panel.querySelectorAll('.aib-tool-card').length;
                 const header = panel.querySelector('.aib-panel-header');
@@ -424,6 +379,5 @@
             });
         });
     </script>
-  <script type="module" src="/index.tsx"></script>
 </body>
 </html>
